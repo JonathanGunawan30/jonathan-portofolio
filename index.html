@@ -48,708 +48,484 @@
 
 <body class="bg-white text-zinc-900 dark:bg-[#050816] dark:text-white transition-colors duration-500 overflow-x-hidden">
 
-  <body
-    class="bg-white text-zinc-900 dark:bg-[#050816] dark:text-white transition-colors duration-500 overflow-x-hidden">
+
+  <div class="fixed inset-0 -z-10 hidden dark:block grid-bg"></div>
+  <div class="fixed inset-0 -z-10 block dark:hidden light-grid"></div>
 
 
-    <div class="fixed inset-0 -z-10 hidden dark:block grid-bg"></div>
-    <div class="fixed inset-0 -z-10 block dark:hidden light-grid"></div>
+  <nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
 
+    <div class="backdrop-blur-xl bg-white/70 dark:bg-white/[0.03] border border-black/5 dark:border-white/10 rounded-2xl h-16 flex items-center justify-between px-6">
+      <a href="#" class="flex items-center gap-3 lg:hover:opacity-80 transition-opacity">
 
-    <nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl">
+        <img src="assets/glowstick.gif" class="no-drag w-9 h-9 rounded-full" alt="" draggable="false">
 
-      <div class="backdrop-blur-xl bg-white/70 dark:bg-white/[0.03]
-      border border-black/5 dark:border-white/10
-      rounded-2xl h-16
-      flex items-center justify-between
-      px-6">
-        <a href="#" class="flex items-center gap-3 lg:hover:opacity-80 transition-opacity">
+        <span class="font-bold text-sm">
+          Jonathan Gunawan
+        </span>
 
-          <img src="assets/glowstick.gif" class="no-drag w-9 h-9 rounded-full" alt="" draggable="false">
+      </a>
 
-          <span class="font-bold text-sm">
-            Jonathan Gunawan
-          </span>
+      <div class="hidden md:flex items-center gap-10 text-sm text-zinc-500 dark:text-zinc-400">
 
+        <a href="#about" class="flex items-center gap-2 lg:hover:text-black dark:lg:hover:text-white transition">
+          <iconify-icon icon="heroicons:user" class="text-lg"></iconify-icon>
+          About
         </a>
 
-        <div class="hidden md:flex items-center gap-10 text-sm text-zinc-500 dark:text-zinc-400">
+        <a href="#projects" class="flex items-center gap-2 lg:hover:text-black dark:lg:hover:text-white transition">
+          <iconify-icon icon="heroicons:briefcase" class="text-lg"></iconify-icon>
+          Projects
+        </a>
 
-          <a href="#about" class="flex items-center gap-2 lg:hover:text-black dark:lg:hover:text-white transition">
-            <iconify-icon icon="heroicons:user" class="text-lg"></iconify-icon>
-            About
-          </a>
-
-          <a href="#projects" class="flex items-center gap-2 lg:hover:text-black dark:lg:hover:text-white transition">
-            <iconify-icon icon="heroicons:briefcase" class="text-lg"></iconify-icon>
-            Projects
-          </a>
-
-          <a href="#contact" class="flex items-center gap-2 lg:hover:text-black dark:lg:hover:text-white transition">
-            <iconify-icon icon="heroicons:envelope" class="text-lg"></iconify-icon>
-            Contact
-          </a>
-
-        </div>
-
-        <div class="flex items-center gap-3">
-
-          <div class="hidden sm:flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
-
-            <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-
-            <span>Available</span>
-
-          </div>
-
-          <button id="themeToggle" class="w-10 h-10 rounded-xl
-          border border-black/10 dark:border-white/10
-          flex items-center justify-center
-          lg:hover:scale-105
-          transition-all duration-300">
-            <iconify-icon id="themeIcon" icon="heroicons:moon" class="text-xl"></iconify-icon>
-          </button>
-
-        </div>
+        <a href="#contact" class="flex items-center gap-2 lg:hover:text-black dark:lg:hover:text-white transition">
+          <iconify-icon icon="heroicons:envelope" class="text-lg"></iconify-icon>
+          Contact
+        </a>
 
       </div>
 
-    </nav>
+      <div class="flex items-center gap-3">
 
-    <section class="min-h-screen flex items-center">
+        <div class="hidden sm:flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400">
 
-      <div class="max-w-6xl mx-auto px-6 w-full">
+          <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
 
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-          <div class="fade-up">
-
-            <div class="flex items-center gap-3
-            text-sky-500
-            uppercase
-            tracking-[0.2em]
-            text-xs
-            font-bold
-            mb-7">
-
-              <div class="w-7 h-[2px] bg-sky-500 rounded-full"></div>
-
-              Computer Science Student
-
-            </div>
-
-            <h1 class="
-            text-6xl
-            md:text-8xl
-            font-extrabold
-            leading-[0.9]
-            tracking-[-0.07em]
-            mb-8
-          ">
-              Jonathan<br>
-              Gunawan
-            </h1>
-
-            <p class="
-            text-zinc-600 dark:text-zinc-400
-            text-lg
-            leading-9
-            max-w-xl
-            mb-10
-          ">
-              Computer Science student based in Tangerang focused on backend engineering,
-              distributed systems, and microservices using Go.
-            </p>
-
-            <div class="flex flex-wrap items-center gap-4">
-
-              <a href="#projects" class="
-                h-12 px-6 rounded-xl
-                bg-sky-500 lg:hover:bg-sky-400
-                text-white font-semibold
-                flex items-center gap-2
-                transition-all duration-300
-                lg:hover:-translate-y-1
-              ">
-                <iconify-icon icon="heroicons:briefcase" class="text-xl"></iconify-icon>
-                View Projects
-              </a>
-
-              <a href="#contact" class="
-                h-12 px-6 rounded-xl
-                border border-black/10 dark:border-white/10
-                lg:hover:border-sky-500
-                flex items-center gap-2
-                transition-all duration-300
-                lg:hover:-translate-y-1
-              ">
-                <iconify-icon icon="heroicons:envelope" class="text-xl"></iconify-icon>
-                Get in Touch
-              </a>
-
-            </div>
-
-          </div>
-
-          <div class="hidden lg:flex fade-up justify-center lg:justify-end">
-
-            <div class="relative">
-
-              <div class="
-              absolute inset-0
-              bg-sky-500/20
-              blur-3xl
-              rounded-full
-              scale-90
-            "></div>
-
-              <img src="assets/gopher.svg" class="no-drag
-                relative z-10
-                w-[230px] md:w-[290px]
-                float
-                drop-shadow-[0_20px_60px_rgba(0,172,215,0.35)]
-              " alt="" draggable="false">
-
-            </div>
-
-          </div>
+          <span>Available</span>
 
         </div>
 
-      </div>
-
-    </section>
-
-    <section id="about" class="py-28">
-
-      <div class="max-w-6xl mx-auto px-6">
-
-        <div class="fade-up mb-14">
-
-          <div class="
-          text-sky-500
-          uppercase
-          tracking-[0.2em]
-          text-xs
-          font-bold
-          mb-4
-        ">
-            About
-          </div>
-
-          <h2 class="
-          text-4xl md:text-5xl
-          font-bold
-          tracking-[-0.05em]
-        ">
-            Learning & building backend systems.
-          </h2>
-
-        </div>
-
-        <div class="grid lg:grid-cols-2 gap-14">
-          <div class="
-          fade-up
-          text-zinc-600 dark:text-zinc-400
-          leading-9
-          text-lg
-        ">
-
-            <p class="mb-6">
-              I am a Computer Science student focused on building efficient backend systems.
-              My current journey involves mastering Go and understanding the core principles of software architecture.
-            </p>
-
-            <p>
-              I value a deep understanding of the foundations in every project I build.
-              I enjoy exploring Clean Architecture and API design to create services that are reliable and easy to
-              maintain.
-            </p>
-
-          </div>
-
-
-          <div class="fade-up grid grid-cols-2 gap-5">
-
-            <div class="
-            p-6 rounded-3xl
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-          ">
-              <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
-                Clean Code
-              </h3>
-
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm">
-                Prioritizing readability and maintainability.
-              </p>
-            </div>
-
-            <div class="
-            p-6 rounded-3xl
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-          ">
-              <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
-                Go Ecosystem
-              </h3>
-
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm">
-                Focusing on idiomatic Go development.
-              </p>
-            </div>
-
-            <div class="
-            p-6 rounded-3xl
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-          ">
-              <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
-                System Design
-              </h3>
-
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm">
-                Learning the foundations of scalable services.
-              </p>
-            </div>
-
-            <div class="
-            p-6 rounded-3xl
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-          ">
-              <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
-                Continuous Learning
-              </h3>
-
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm">
-                Exploring distributed systems & infrastructure.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <div id="projectModal"
-      class="fixed inset-0 z-[100] hidden flex items-end md:items-center justify-center p-0 md:p-6">
-      <div class="absolute inset-0 bg-black/60 backdrop-blur-md" id="modalBackdrop"></div>
-      <div id="modalPanel" class="
-      relative z-10 
-      w-full max-w-3xl max-h-[95vh] md:max-h-[90vh] 
-      bg-white dark:bg-[#0a0f24] 
-      rounded-t-[2.5rem] md:rounded-[2.5rem] 
-      border-t md:border border-black/5 dark:border-white/10
-      overflow-y-auto
-      p-8 md:p-12
-      shadow-2xl
-    ">
-
-        <div id="modalDragHandle" class="md:hidden w-full mb-4"
-          style="height: 2rem; padding-top: 0.5rem; touch-action: none; cursor: grab;">
-          <div class="w-12 h-1.5 bg-zinc-200 dark:bg-white/10 rounded-full mx-auto"></div>
-        </div>
-
-        <button id="closeModal"
-          class="absolute top-6 right-6 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 lg:hover:bg-black/10 dark:lg:hover:bg-white/10 transition">
-          <iconify-icon icon="heroicons:x-mark" class="text-xl"></iconify-icon>
-        </button>
-
-        <div id="modalContent">
-        </div>
-
-        <button onclick="hideModal()"
-          class="md:hidden w-full mt-10 h-14 rounded-2xl bg-zinc-100 dark:bg-white/5 font-bold text-sm">
-          Close
+        <button id="themeToggle" class="w-10 h-10 rounded-xl border border-black/10 dark:border-white/10 flex items-center justify-center lg:hover:scale-105 transition-all duration-300">
+          <iconify-icon id="themeIcon" icon="heroicons:moon" class="text-xl"></iconify-icon>
         </button>
 
       </div>
+
     </div>
 
-    <section id="projects" class="py-28">
+  </nav>
 
-      <div class="max-w-6xl mx-auto px-6">
+  <section class="min-h-screen flex items-center">
 
-        <div class="
-        fade-up
-        flex flex-col md:flex-row
-        md:items-end
-        md:justify-between
-        gap-8
-        mb-16
-      ">
+    <div class="max-w-6xl mx-auto px-6 w-full">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div class="fade-up">
+
+          <div class="flex items-center gap-3 text-sky-500 uppercase tracking-[0.2em] text-xs font-bold mb-7">
+
+            <div class="w-7 h-[2px] bg-sky-500 rounded-full"></div>
+
+            Computer Science Student
+
+          </div>
+
+          <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.9] tracking-[-0.07em] mb-8">
+            Jonathan<br>
+            Gunawan
+          </h1>
+
+          <p class="text-zinc-600 dark:text-zinc-400 text-lg leading-9 max-w-xl mb-10">
+            Computer Science student based in Tangerang focused on backend engineering,
+            distributed systems, and microservices using Go.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4">
+
+            <a href="#projects" class="h-12 px-6 rounded-xl bg-sky-500 lg:hover:bg-sky-400 text-white font-semibold flex items-center gap-2 transition-all duration-300 lg:hover:-translate-y-1">
+              <iconify-icon icon="heroicons:briefcase" class="text-xl"></iconify-icon>
+              View Projects
+            </a>
+
+            <a href="#contact" class="h-12 px-6 rounded-xl border border-black/10 dark:border-white/10 lg:hover:border-sky-500 flex items-center gap-2 transition-all duration-300 lg:hover:-translate-y-1">
+              <iconify-icon icon="heroicons:envelope" class="text-xl"></iconify-icon>
+              Get in Touch
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hidden lg:flex fade-up justify-center lg:justify-end">
+
+          <div class="relative">
+
+            <div class="absolute inset-0 bg-sky-500/20 blur-3xl rounded-full scale-90"></div>
+
+            <img src="assets/gopher.svg" class="no-drag relative z-10 w-[230px] md:w-[290px] float drop-shadow-[0_20px_60px_rgba(0,172,215,0.35)]" alt="" draggable="false">
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="about" class="py-28">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="fade-up mb-14">
+
+        <div class="text-sky-500 uppercase tracking-[0.2em] text-xs font-bold mb-4">
+          About
+        </div>
+
+        <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.05em]">
+          Learning & building backend systems.
+        </h2>
+
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-14">
+        <div class="fade-up text-zinc-600 dark:text-zinc-400 leading-9 text-lg">
+
+          <p class="mb-6">
+            I am a Computer Science student focused on building efficient backend systems.
+            My current journey involves mastering Go and understanding the core principles of software architecture.
+          </p>
+
+          <p>
+            I value a deep understanding of the foundations in every project I build.
+            I enjoy exploring Clean Architecture and API design to create services that are reliable and easy to
+            maintain.
+          </p>
+
+        </div>
+
+
+        <div class="fade-up grid grid-cols-2 gap-5">
+
+          <div class="p-6 rounded-3xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur">
+            <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
+              Clean Code
+            </h3>
+
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm">
+              Prioritizing readability and maintainability.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur">
+            <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
+              Go Ecosystem
+            </h3>
+
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm">
+              Focusing on idiomatic Go development.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur">
+            <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
+              System Design
+            </h3>
+
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm">
+              Learning the foundations of scalable services.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur">
+            <h3 class="text-xl font-bold tracking-[-0.05em] mb-2">
+              Continuous Learning
+            </h3>
+
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm">
+              Exploring distributed systems & infrastructure.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <div id="projectModal"
+    class="fixed inset-0 z-[100] hidden flex items-end md:items-center justify-center p-0 md:p-6">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-md" id="modalBackdrop"></div>
+    <div id="modalPanel" class="relative z-10 w-full max-w-3xl max-h-[95vh] md:max-h-[90vh] bg-white dark:bg-[#0a0f24] rounded-t-[2.5rem] md:rounded-[2.5rem] border-t md:border border-black/5 dark:border-white/10 overflow-y-auto p-8 md:p-12 shadow-2xl">
+
+      <div id="modalDragHandle" class="md:hidden w-full mb-4"
+        style="height: 2rem; padding-top: 0.5rem; touch-action: none; cursor: grab;">
+        <div class="w-12 h-1.5 bg-zinc-200 dark:bg-white/10 rounded-full mx-auto"></div>
+      </div>
+
+      <button id="closeModal"
+        class="absolute top-6 right-6 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 lg:hover:bg-black/10 dark:lg:hover:bg-white/10 transition">
+        <iconify-icon icon="heroicons:x-mark" class="text-xl"></iconify-icon>
+      </button>
+
+      <div id="modalContent">
+      </div>
+
+      <button onclick="hideModal()"
+        class="md:hidden w-full mt-10 h-14 rounded-2xl bg-zinc-100 dark:bg-white/5 font-bold text-sm">
+        Close
+      </button>
+
+    </div>
+  </div>
+
+  <section id="projects" class="py-28">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="fade-up flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
+
+        <div>
+
+          <div class="text-sky-500 uppercase tracking-[0.2em] text-xs font-bold mb-4">
+            Projects
+          </div>
+
+          <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.05em] mb-4">
+            Things I've built.
+          </h2>
+
+          <p class="text-zinc-600 dark:text-zinc-400 max-w-lg leading-8">
+            A collection of backend-focused projects exploring different architectural patterns
+            and modern web technologies.
+          </p>
+
+        </div>
+
+        <a href="https://github.com/jonathangunawan30" target="_blank" class="h-12 px-6 rounded-xl border border-black/10 dark:border-white/10 flex items-center justify-center lg:hover:border-sky-500 transition-all duration-300">
+          View GitHub
+        </a>
+
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-7">
+
+        <div class="project-card fade-up rounded-3xl overflow-hidden border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur lg:hover:-translate-y-2 transition-all duration-500 cursor-pointer" data-title="MicroGreens" data-subtitle="MICROSERVICES" data-image="assets/microgreens-mockup.webp"
+          data-description="E-commerce marketplace with integrated admin dashboard and microservices."
+          data-long-description="MicroGreens is an e-commerce platform for grocery marketplaces. It includes a management dashboard for administrators and uses a Microservices architecture. The system handles asynchronous communication via RabbitMQ, integrated payments through Midtrans, and Nginx as an API Gateway."
+          data-tech='["Go", "Nuxt 3", "RabbitMQ", "Midtrans", "PostgreSQL", "Docker", "Nginx", "JWT", "Redis", "Elasticsearch"]'
+          data-links='[
+          {"label": "Live Demo", "url": "https://store.jonathangunawan.com", "icon": "heroicons:arrow-top-right-on-square"},
+          {"label": "Backend Repo", "url": "https://github.com/jonathangunawan30/microgreens", "icon": "mdi:github"},
+          {"label": "Frontend Repo", "url": "https://github.com/jonathangunawan30/microgreens-frontend", "icon": "mdi:github"}
+        ]'>
+
+          <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+            <img src="assets/microgreens-mockup.webp" class="no-drag w-full" alt="MicroGreens Preview"
+              draggable="false">
+          </div>
+
+          <div class="p-7">
+
+            <div class="flex items-center justify-between mb-4">
+
+              <h3 class="text-xl font-bold tracking-[-0.03em]">
+                MicroGreens
+              </h3>
+
+              <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">
+                Microservices
+              </div>
+
+            </div>
+
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
+              E-commerce marketplace with integrated admin dashboard and microservices.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="project-card fade-up rounded-3xl overflow-hidden border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur lg:hover:-translate-y-2 transition-all duration-500 cursor-pointer" data-title="Padel Booking" data-subtitle="MICROSERVICES" data-image="assets/padelbook-mockup.webp"
+          data-description="Court reservation platform with admin dashboard and integrated payments."
+          data-long-description="Padel Booking is a platform for padel court reservations and facility management. It includes an admin dashboard for handling bookings and users. The system uses a Go microservices backend, Next.js frontend, and includes asynchronous synchronization via Kafka."
+          data-tech='["Go", "Next.js 16", "Kafka", "PostgreSQL", "Midtrans", "Docker", "Nginx", "JWT", "Cloudflare R2"]'
+          data-links='[
+          {"label": "Live Demo", "url": "https://padel.jonathangunawan.com", "icon": "heroicons:arrow-top-right-on-square"},
+          {"label": "Backend Repo", "url": "https://github.com/jonathangunawan30/booking-system", "icon": "mdi:github"},
+          {"label": "Frontend Repo", "url": "https://github.com/jonathangunawan30/padel-court", "icon": "mdi:github"}
+        ]'>
+
+          <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+            <img src="assets/padelbook-mockup.webp" class="no-drag w-full" alt="Padel Booking Preview"
+              draggable="false">
+          </div>
+
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold tracking-[-0.03em]">Padel Booking</h3>
+              <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">
+                Microservices</div>
+            </div>
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
+              Court reservation platform with admin dashboard and integrated payments.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="project-card fade-up rounded-3xl overflow-hidden border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur lg:hover:-translate-y-2 transition-all duration-500 cursor-pointer" data-title="News Portal" data-subtitle="MONOLITH" data-image="assets/newsportal-mockup.webp"
+          data-description="News portal and CMS dashboard built with Go and Next.js."
+          data-long-description="Jonathan News Portal is an application for managing and reading news articles. It includes a public portal and a CMS dashboard for administrators. The system uses a Go Fiber backend with JWT and reCAPTCHA for security, and Cloudflare R2 for storage."
+          data-tech='["Go Fiber", "Next.js 16", "PostgreSQL", "Cloudflare R2", "JWT", "reCAPTCHA", "Docker", "Tailwind CSS"]'
+          data-links='[
+          {"label": "Live Demo", "url": "https://blog.jonathangunawan.com", "icon": "heroicons:arrow-top-right-on-square"},
+          {"label": "Backend Repo", "url": "https://github.com/jonathangunawan30/portal-news-backend", "icon": "mdi:github"},
+          {"label": "Frontend Repo", "url": "https://github.com/jonathangunawan30/portal-news-frontend", "icon": "mdi:github"}
+        ]'>
+
+          <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+            <img src="assets/newsportal-mockup.webp" class="no-drag w-full" alt="News Portal Preview"
+              draggable="false">
+          </div>
+
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold tracking-[-0.03em]">News Portal</h3>
+              <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">Monolith
+              </div>
+            </div>
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
+              News portal and CMS dashboard built with Go and Next.js.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="project-card fade-up rounded-3xl overflow-hidden border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur lg:hover:-translate-y-2 transition-all duration-500 cursor-pointer" data-title="FundRaiser" data-subtitle="MONOLITH" data-image="assets/fundraiser-mockup.webp"
+          data-description="Crowdfunding and charity donation platform with secure payments and campaign management."
+          data-long-description="FundRaiser is a full-stack crowdfunding and charity donation platform. It combines a Laravel REST API with a React and TypeScript frontend, supporting campaign management, Midtrans payments, social authentication, background processing through RabbitMQ, and real-time notifications."
+          data-tech='["Laravel 13", "PHP 8.3", "FrankenPHP", "React 19", "TypeScript", "MySQL", "RabbitMQ", "Redis", "Midtrans", "Cloudflare Turnstile", "Docker"]'
+          data-links='[
+          {"label": "Live Demo", "icon": "heroicons:arrow-top-right-on-square", "disabled": true},
+          {"label": "Backend Repo", "url": "https://github.com/JonathanGunawan30/fundraiser-backend", "icon": "mdi:github"},
+          {"label": "Frontend Repo", "url": "https://github.com/JonathanGunawan30/fundraiser-frontend", "icon": "mdi:github"}
+        ]'>
+
+          <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+            <img src="assets/fundraiser-mockup.webp" class="no-drag w-full" alt="FundRaiser Preview"
+              draggable="false">
+          </div>
+
+          <div class="p-7">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold tracking-[-0.03em]">FundRaiser</h3>
+              <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">
+                Monolith</div>
+            </div>
+            <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
+              Crowdfunding and charity donation platform with secure payments and campaign management.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="py-28">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="fade-up rounded-[2rem] border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur p-10 md:p-16">
+
+        <img src="assets/gopher-dance.gif" class="no-drag w-20 h-20 mb-10" alt="" draggable="false">
+
+        <div class="grid lg:grid-cols-2 gap-14 items-start">
 
           <div>
 
-            <div class="
-            text-sky-500
-            uppercase
-            tracking-[0.2em]
-            text-xs
-            font-bold
-            mb-4
-          ">
-              Projects
+            <div class="text-sky-500 uppercase tracking-[0.2em] text-xs font-bold mb-4">
+              Contact
             </div>
 
-            <h2 class="
-            text-4xl md:text-5xl
-            font-bold
-            tracking-[-0.05em]
-            mb-4
-          ">
-              Things I've built.
+            <h2 class="text-4xl md:text-5xl font-bold tracking-[-0.05em] mb-6">
+              Let's build something.
             </h2>
 
-            <p class="
-            text-zinc-600 dark:text-zinc-400
-            max-w-lg
-            leading-8
-          ">
-              A collection of backend-focused projects exploring different architectural patterns
-              and modern web technologies.
+            <p class="text-zinc-600 dark:text-zinc-400 leading-8 mb-8 max-w-lg">
+              I am always looking for new ways to grow and learn.
+              I would love to connect, discuss tech, or collaborate on interesting backend projects.
             </p>
 
+            <a href="mailto:jgunawan3005@gmail.com" class="inline-flex h-12 px-6 rounded-xl bg-sky-500 lg:hover:bg-sky-400 text-white font-semibold items-center transition-all duration-300">
+              Send an Email
+            </a>
+
           </div>
 
-          <a href="https://github.com/jonathangunawan30" target="_blank" class="
-            h-12 px-6 rounded-xl
-            border border-black/10 dark:border-white/10
-            flex items-center justify-center
-            lg:hover:border-sky-500
-            transition-all duration-300
-          ">
-            View GitHub
-          </a>
+          <div class="border border-black/5 dark:border-white/10 rounded-3xl overflow-hidden">
 
+            <div class="min-h-[5rem] py-4 px-6 flex flex-col sm:flex-row sm:items-center justify-between border-b border-black/5 dark:border-white/10 lg:hover:bg-black/[0.02] dark:lg:hover:bg-white/[0.02] transition gap-2">
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="heroicons:envelope" class="text-xl text-zinc-400"></iconify-icon>
+                <span class="font-semibold">Email</span>
+              </div>
+
+              <div class="flex items-center gap-2" style="min-width: 0;">
+                <a href="mailto:jgunawan3005@gmail.com"
+                  class="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base truncate sm:overflow-visible"
+                  style="min-width: 0;">
+                  jgunawan3005@gmail.com
+                </a>
+
+                <button id="copyEmail" type="button" aria-label="Copy email address" title="Copy email address"
+                  class="w-10 h-10 rounded-xl border border-black/10 dark:border-white/10 flex items-center justify-center transition-all lg:hover:border-sky-500"
+                  style="flex-shrink: 0;">
+                  <iconify-icon id="copyEmailIcon" icon="heroicons:clipboard" class="text-lg"></iconify-icon>
+                </button>
+                <span id="copyEmailStatus" aria-live="polite"
+                  style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;"></span>
+              </div>
+            </div>
+
+            <a href="https://linkedin.com/in/jonathangunawan30" target="_blank" class="min-h-[5rem] py-4 px-6 flex flex-col sm:flex-row sm:items-center justify-between border-b border-black/5 dark:border-white/10 lg:hover:bg-black/[0.02] dark:lg:hover:bg-white/[0.02] transition gap-2">
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="mdi:linkedin" class="text-xl text-zinc-400"></iconify-icon>
+                <span class="font-semibold">LinkedIn</span>
+              </div>
+              <span class="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base">
+                /in/jonathangunawan30
+              </span>
+            </a>
+
+            <a href="https://github.com/jonathangunawan30" target="_blank"
+              class="min-h-[5rem] py-4 px-6 flex flex-col sm:flex-row sm:items-center justify-between lg:hover:bg-black/[0.02] dark:lg:hover:bg-white/[0.02] transition gap-2">
+              <div class="flex items-center gap-3">
+                <iconify-icon icon="mdi:github" class="text-xl text-zinc-400"></iconify-icon>
+                <span class="font-semibold">GitHub</span>
+              </div>
+              <span class="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base">
+                @jonathangunawan30
+              </span>
+            </a>
+          </div>
         </div>
-
-        <div class="grid lg:grid-cols-2 gap-7">
-
-          <div class="
-            project-card
-            fade-up
-            rounded-3xl
-            overflow-hidden
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-            lg:hover:-translate-y-2
-            transition-all duration-500
-            cursor-pointer
-          " data-title="MicroGreens" data-subtitle="MICROSERVICES" data-image="assets/microgreens-mockup.webp"
-            data-description="E-commerce marketplace with integrated admin dashboard and microservices."
-            data-long-description="MicroGreens is an e-commerce platform for grocery marketplaces. It includes a management dashboard for administrators and uses a Microservices architecture. The system handles asynchronous communication via RabbitMQ, integrated payments through Midtrans, and Nginx as an API Gateway."
-            data-tech='["Go", "Nuxt 3", "RabbitMQ", "Midtrans", "PostgreSQL", "Docker", "Nginx", "JWT", "Redis", "Elasticsearch"]'
-            data-links='[
-            {"label": "Live Demo", "url": "https://store.jonathangunawan.com", "icon": "heroicons:arrow-top-right-on-square"},
-            {"label": "Backend Repo", "url": "https://github.com/jonathangunawan30/microgreens", "icon": "mdi:github"},
-            {"label": "Frontend Repo", "url": "https://github.com/jonathangunawan30/microgreens-frontend", "icon": "mdi:github"}
-          ]'>
-
-            <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-              <img src="assets/microgreens-mockup.webp" class="no-drag w-full" alt="MicroGreens Preview"
-                draggable="false">
-            </div>
-
-            <div class="p-7">
-
-              <div class="flex items-center justify-between mb-4">
-
-                <h3 class="text-xl font-bold tracking-[-0.03em]">
-                  MicroGreens
-                </h3>
-
-                <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">
-                  Microservices
-                </div>
-
-              </div>
-
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
-                E-commerce marketplace with integrated admin dashboard and microservices.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="
-            project-card
-            fade-up
-            rounded-3xl
-            overflow-hidden
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-            lg:hover:-translate-y-2
-            transition-all duration-500
-            cursor-pointer
-          " data-title="Padel Booking" data-subtitle="MICROSERVICES" data-image="assets/padelbook-mockup.webp"
-            data-description="Court reservation platform with admin dashboard and integrated payments."
-            data-long-description="Padel Booking is a platform for padel court reservations and facility management. It includes an admin dashboard for handling bookings and users. The system uses a Go microservices backend, Next.js frontend, and includes asynchronous synchronization via Kafka."
-            data-tech='["Go", "Next.js 16", "Kafka", "PostgreSQL", "Midtrans", "Docker", "Nginx", "JWT", "Cloudflare R2"]'
-            data-links='[
-            {"label": "Live Demo", "url": "https://padel.jonathangunawan.com", "icon": "heroicons:arrow-top-right-on-square"},
-            {"label": "Backend Repo", "url": "https://github.com/jonathangunawan30/booking-system", "icon": "mdi:github"},
-            {"label": "Frontend Repo", "url": "https://github.com/jonathangunawan30/padel-court", "icon": "mdi:github"}
-          ]'>
-
-            <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-              <img src="assets/padelbook-mockup.webp" class="no-drag w-full" alt="Padel Booking Preview"
-                draggable="false">
-            </div>
-
-            <div class="p-7">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl font-bold tracking-[-0.03em]">Padel Booking</h3>
-                <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">
-                  Microservices</div>
-              </div>
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
-                Court reservation platform with admin dashboard and integrated payments.
-              </p>
-            </div>
-
-          </div>
-
-          <div class="
-            project-card
-            fade-up
-            rounded-3xl
-            overflow-hidden
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-            lg:hover:-translate-y-2
-            transition-all duration-500
-            cursor-pointer
-          " data-title="News Portal" data-subtitle="MONOLITH" data-image="assets/newsportal-mockup.webp"
-            data-description="News portal and CMS dashboard built with Go and Next.js."
-            data-long-description="Jonathan News Portal is an application for managing and reading news articles. It includes a public portal and a CMS dashboard for administrators. The system uses a Go Fiber backend with JWT and reCAPTCHA for security, and Cloudflare R2 for storage."
-            data-tech='["Go Fiber", "Next.js 16", "PostgreSQL", "Cloudflare R2", "JWT", "reCAPTCHA", "Docker", "Tailwind CSS"]'
-            data-links='[
-            {"label": "Live Demo", "url": "https://blog.jonathangunawan.com", "icon": "heroicons:arrow-top-right-on-square"},
-            {"label": "Backend Repo", "url": "https://github.com/jonathangunawan30/portal-news-backend", "icon": "mdi:github"},
-            {"label": "Frontend Repo", "url": "https://github.com/jonathangunawan30/portal-news-frontend", "icon": "mdi:github"}
-          ]'>
-
-            <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-              <img src="assets/newsportal-mockup.webp" class="no-drag w-full" alt="News Portal Preview"
-                draggable="false">
-            </div>
-
-            <div class="p-7">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl font-bold tracking-[-0.03em]">News Portal</h3>
-                <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">Monolith
-                </div>
-              </div>
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
-                News portal and CMS dashboard built with Go and Next.js.
-              </p>
-            </div>
-
-          </div>
-
-          <div class="
-            project-card
-            fade-up
-            rounded-3xl
-            overflow-hidden
-            border border-black/5 dark:border-white/10
-            bg-black/[0.02] dark:bg-white/[0.02]
-            backdrop-blur
-            lg:hover:-translate-y-2
-            transition-all duration-500
-            cursor-pointer
-          " data-title="FundRaiser" data-subtitle="MONOLITH" data-image="assets/fundraiser-mockup.webp"
-            data-description="Crowdfunding and charity donation platform with secure payments and campaign management."
-            data-long-description="FundRaiser is a full-stack crowdfunding and charity donation platform. It combines a Laravel REST API with a React and TypeScript frontend, supporting campaign management, Midtrans payments, social authentication, background processing through RabbitMQ, and real-time notifications."
-            data-tech='["Laravel 13", "PHP 8.3", "FrankenPHP", "React 19", "TypeScript", "MySQL", "RabbitMQ", "Redis", "Midtrans", "Cloudflare Turnstile", "Docker"]'
-            data-links='[
-            {"label": "Live Demo", "icon": "heroicons:arrow-top-right-on-square", "disabled": true},
-            {"label": "Backend Repo", "url": "https://github.com/JonathanGunawan30/fundraiser-backend", "icon": "mdi:github"},
-            {"label": "Frontend Repo", "url": "https://github.com/JonathanGunawan30/fundraiser-frontend", "icon": "mdi:github"}
-          ]'>
-
-            <div class="overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-              <img src="assets/fundraiser-mockup.webp" class="no-drag w-full" alt="FundRaiser Preview"
-                draggable="false">
-            </div>
-
-            <div class="p-7">
-              <div class="flex items-center justify-between mb-4">
-                <h3 class="text-xl font-bold tracking-[-0.03em]">FundRaiser</h3>
-                <div class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-500/10 text-sky-500 uppercase">
-                  Monolith</div>
-              </div>
-              <p class="text-zinc-500 dark:text-zinc-400 text-sm leading-7">
-                Crowdfunding and charity donation platform with secure payments and campaign management.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
       </div>
-
-    </section>
-
     </div>
-
-    </section>
-
-    <section id="contact" class="py-28">
-
-      <div class="max-w-6xl mx-auto px-6">
-
-        <div class="
-        fade-up
-        rounded-[2rem]
-        border border-black/5 dark:border-white/10
-        bg-black/[0.02] dark:bg-white/[0.02]
-        backdrop-blur
-        p-10 md:p-16
-      ">
-
-          <img src="assets/gopher-dance.gif" class="no-drag w-20 h-20 mb-10" alt="" draggable="false">
-
-          <div class="grid lg:grid-cols-2 gap-14 items-start">
-
-            <div>
-
-              <div class="
-              text-sky-500
-              uppercase
-              tracking-[0.2em]
-              text-xs
-              font-bold
-              mb-4
-            ">
-                Contact
-              </div>
-
-              <h2 class="
-              text-4xl md:text-5xl
-              font-bold
-              tracking-[-0.05em]
-              mb-6
-            ">
-                Let's build something.
-              </h2>
-
-              <p class="
-              text-zinc-600 dark:text-zinc-400
-              leading-8
-              mb-8
-              max-w-lg
-            ">
-                I am always looking for new ways to grow and learn.
-                I would love to connect, discuss tech, or collaborate on interesting backend projects.
-              </p>
-
-              <a href="mailto:jgunawan3005@gmail.com" class="
-                inline-flex
-                h-12 px-6
-                rounded-xl
-                bg-sky-500
-                lg:hover:bg-sky-400
-                text-white
-                font-semibold
-                items-center
-                transition-all duration-300
-              ">
-                Send an Email
-              </a>
-
-            </div>
-
-            <div class="
-            border border-black/5 dark:border-white/10
-            rounded-3xl
-            overflow-hidden
-          ">
-
-              <div class="
-                min-h-[5rem] py-4 px-6
-                flex flex-col sm:flex-row sm:items-center justify-between
-                border-b border-black/5 dark:border-white/10
-                lg:hover:bg-black/[0.02]
-                dark:lg:hover:bg-white/[0.02]
-                transition
-                gap-2
-              ">
-                <div class="flex items-center gap-3">
-                  <iconify-icon icon="heroicons:envelope" class="text-xl text-zinc-400"></iconify-icon>
-                  <span class="font-semibold">Email</span>
-                </div>
-
-                <div class="flex items-center gap-2" style="min-width: 0;">
-                  <a href="mailto:jgunawan3005@gmail.com"
-                    class="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base truncate sm:overflow-visible"
-                    style="min-width: 0;">
-                    jgunawan3005@gmail.com
-                  </a>
-
-                  <button id="copyEmail" type="button" aria-label="Copy email address" title="Copy email address"
-                    class="w-10 h-10 rounded-xl border border-black/10 dark:border-white/10 flex items-center justify-center transition-all lg:hover:border-sky-500"
-                    style="flex-shrink: 0;">
-                    <iconify-icon id="copyEmailIcon" icon="heroicons:clipboard" class="text-lg"></iconify-icon>
-                  </button>
-                  <span id="copyEmailStatus" aria-live="polite"
-                    style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;"></span>
-                </div>
-              </div>
-
-              <a href="https://linkedin.com/in/jonathangunawan30" target="_blank" class=" min-h-[5rem] py-4 px-6 flex flex-col sm:flex-row sm:items-center justify-between border-b border-black/5 dark:border-white/10 lg:hover:bg-black/[0.02] dark:lg:hover:bg-white/[0.02] transition gap-2
-              ">
-                <div class="flex items-center gap-3">
-                  <iconify-icon icon="mdi:linkedin" class="text-xl text-zinc-400"></iconify-icon>
-                  <span class="font-semibold">LinkedIn</span>
-                </div>
-                <span class="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base">
-                  /in/jonathangunawan30
-                </span>
-              </a>
-
-              <a href="https://github.com/jonathangunawan30" target="_blank"
-                class=" min-h-[5rem] py-4 px-6 flex flex-col sm:flex-row sm:items-center justify-between lg:hover:bg-black/[0.02] dark:lg:hover:bg-white/[0.02] transition gap-2">
-                <div class="flex items-center gap-3">
-                  <iconify-icon icon="mdi:github" class="text-xl text-zinc-400"></iconify-icon>
-                  <span class="font-semibold">GitHub</span>
-                </div>
-                <span class="text-zinc-500 dark:text-zinc-400 text-sm sm:text-base">
-                  @jonathangunawan30
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <footer class="py-10">
-      <div
-        class=" max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-4 justify-between text-sm text-zinc-500 dark:text-zinc-400">
-        <span>
-          ©
-          <script>document.write(new Date().getFullYear())</script> Jonathan Gunawan
-        </span>
-        <span>
-          Tangerang, Indonesia
-        </span>
-      </div>
-    </footer>
-    <script src="./js/main.js"></script>
-  </body>
+  </section>
+  <footer class="py-10">
+    <div
+      class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row gap-4 justify-between text-sm text-zinc-500 dark:text-zinc-400">
+      <span>
+        ©
+        <script>document.write(new Date().getFullYear())</script> Jonathan Gunawan
+      </span>
+      <span>
+        Tangerang, Indonesia
+      </span>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
 
 </html>
