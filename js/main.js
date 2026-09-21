@@ -36,6 +36,15 @@ document.querySelectorAll('.fade-up').forEach(el => {
   observer.observe(el)
 })
 
+document.addEventListener('dragstart', event => {
+  const target = event.target
+
+  if (target instanceof Element &&
+    (target.matches('img.no-drag') || target.querySelector('img.no-drag'))) {
+    event.preventDefault()
+  }
+})
+
 
 const modal = document.getElementById('projectModal')
 const modalPanel = document.getElementById('modalPanel')
