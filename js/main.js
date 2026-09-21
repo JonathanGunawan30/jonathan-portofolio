@@ -218,17 +218,32 @@ const contactEmail = 'jgunawan3005@gmail.com'
 let copyEmailTimer = null
 
 function fallbackCopyText(text) {
+  const activeElement = document.activeElement
   const textarea = document.createElement('textarea')
   textarea.value = text
   textarea.setAttribute('readonly', '')
   textarea.style.position = 'fixed'
+  textarea.style.top = '0'
+  textarea.style.left = '-9999px'
   textarea.style.opacity = '0'
+  textarea.style.fontSize = '16px'
 
   document.body.appendChild(textarea)
+  textarea.focus()
   textarea.select()
+  textarea.setSelectionRange(0, textarea.value.length)
 
-  const copied = document.execCommand('copy')
-  textarea.remove()
+  let copied = false
+
+  try {
+    copied = document.execCommand('copy')
+  } finally {
+    textarea.remove()
+
+    if (activeElement instanceof HTMLElement) {
+      activeElement.focus({ preventScroll: true })
+    }
+  }
 
   if (!copied) {
     throw new Error('Unable to copy text')
@@ -236,16 +251,17 @@ function fallbackCopyText(text) {
 }
 
 async function copyText(text) {
+  try {
+    fallbackCopyText(text)
+    return
+  } catch (_) {}
+
   if (navigator.clipboard && window.isSecureContext) {
-    try {
-      await navigator.clipboard.writeText(text)
-      return
-    } catch (_) {
-      // Fall back when clipboard permission is unavailable.
-    }
+    await navigator.clipboard.writeText(text)
+    return
   }
 
-  fallbackCopyText(text)
+  throw new Error('Clipboard access is unavailable')
 }
 
 function showCopyEmailFeedback(copied) {
