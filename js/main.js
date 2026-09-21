@@ -210,3 +210,65 @@ function hideModal() {
 
 closeModal.addEventListener('click', hideModal)
 modalBackdrop.addEventListener('click', hideModal)
+
+const copyEmailButton = document.getElementById('copyEmail')
+const copyEmailIcon = document.getElementById('copyEmailIcon')
+const copyEmailStatus = document.getElementById('copyEmailStatus')
+const contactEmail = 'jgunawan3005@gmail.com'
+let copyEmailTimer = null
+
+function fallbackCopyText(text) {
+  const textarea = document.createElement('textarea')
+  textarea.value = text
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'fixed'
+  textarea.style.opacity = '0'
+
+  document.body.appendChild(textarea)
+  textarea.select()
+
+  const copied = document.execCommand('copy')
+  textarea.remove()
+
+  if (!copied) {
+    throw new Error('Unable to copy text')
+  }
+}
+
+async function copyText(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text)
+      return
+    } catch (_) {
+      // Fall back when clipboard permission is unavailable.
+    }
+  }
+
+  fallbackCopyText(text)
+}
+
+function showCopyEmailFeedback(copied) {
+  window.clearTimeout(copyEmailTimer)
+
+  copyEmailIcon.setAttribute('icon', copied ? 'heroicons:check' : 'heroicons:x-mark')
+  copyEmailStatus.textContent = copied ? 'Email address copied' : 'Copy failed, try again'
+  copyEmailButton.setAttribute('aria-label', copied ? 'Email address copied' : 'Copy failed, try again')
+  copyEmailButton.title = copied ? 'Email address copied' : 'Copy failed, try again'
+
+  copyEmailTimer = window.setTimeout(() => {
+    copyEmailIcon.setAttribute('icon', 'heroicons:clipboard')
+    copyEmailStatus.textContent = ''
+    copyEmailButton.setAttribute('aria-label', 'Copy email address')
+    copyEmailButton.title = 'Copy email address'
+  }, 2000)
+}
+
+copyEmailButton.addEventListener('click', async () => {
+  try {
+    await copyText(contactEmail)
+    showCopyEmailFeedback(true)
+  } catch (_) {
+    showCopyEmailFeedback(false)
+  }
+})
