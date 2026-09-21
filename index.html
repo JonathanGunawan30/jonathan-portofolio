@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth" style="scrollbar-gutter: stable;">
 
 <head>
   <meta charset="UTF-8" />
@@ -340,7 +340,7 @@
     <div id="projectModal"
       class="fixed inset-0 z-[100] hidden flex items-end md:items-center justify-center p-0 md:p-6">
       <div class="absolute inset-0 bg-black/60 backdrop-blur-md" id="modalBackdrop"></div>
-      <div class="
+      <div id="modalPanel" class="
       relative z-10 
       w-full max-w-3xl max-h-[95vh] md:max-h-[90vh] 
       bg-white dark:bg-[#0a0f24] 
@@ -351,7 +351,10 @@
       shadow-2xl
     ">
 
-        <div class="md:hidden w-12 h-1.5 bg-zinc-200 dark:bg-white/10 rounded-full mx-auto mb-8"></div>
+        <div id="modalDragHandle" class="md:hidden w-full mb-4"
+          style="height: 2rem; padding-top: 0.5rem; touch-action: none; cursor: grab;">
+          <div class="w-12 h-1.5 bg-zinc-200 dark:bg-white/10 rounded-full mx-auto"></div>
+        </div>
 
         <button id="closeModal"
           class="absolute top-6 right-6 w-10 h-10 hidden md:flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 lg:hover:bg-black/10 dark:lg:hover:bg-white/10 transition">

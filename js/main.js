@@ -38,9 +38,111 @@ document.querySelectorAll('.fade-up').forEach(el => {
 
 
 const modal = document.getElementById('projectModal')
+const modalPanel = document.getElementById('modalPanel')
 const modalContent = document.getElementById('modalContent')
 const modalBackdrop = document.getElementById('modalBackdrop')
+const modalDragHandle = document.getElementById('modalDragHandle')
 const closeModal = document.getElementById('closeModal')
+
+const mobileModal = window.matchMedia('(max-width: 767px)')
+let dragPointerId = null
+let dragStartY = 0
+let dragStartTime = 0
+let dragDistance = 0
+let dragFrame = null
+
+function resetModalDrag() {
+  if (dragFrame) {
+    cancelAnimationFrame(dragFrame)
+    dragFrame = null
+  }
+
+  dragPointerId = null
+  dragDistance = 0
+  modalPanel.style.transition = ''
+  modalPanel.style.transform = ''
+  modalBackdrop.style.transition = ''
+  modalBackdrop.style.opacity = ''
+  modalDragHandle.style.cursor = 'grab'
+}
+
+function updateModalDrag() {
+  modalPanel.style.transform = `translateY(${dragDistance}px)`
+  modalBackdrop.style.opacity = Math.max(0, 1 - dragDistance / modalPanel.offsetHeight)
+  dragFrame = null
+}
+
+function closeModalFromSwipe() {
+  const transition = '220ms cubic-bezier(0.22, 1, 0.36, 1)'
+
+  modalPanel.style.transition = `transform ${transition}`
+  modalBackdrop.style.transition = `opacity ${transition}`
+  modalPanel.style.transform = `translateY(${modalPanel.offsetHeight}px)`
+  modalBackdrop.style.opacity = '0'
+
+  window.setTimeout(hideModal, 220)
+}
+
+function finishModalDrag(event) {
+  if (event.pointerId !== dragPointerId) return
+
+  if (dragFrame) {
+    cancelAnimationFrame(dragFrame)
+    dragFrame = null
+    updateModalDrag()
+  }
+
+  const elapsed = Math.max(performance.now() - dragStartTime, 1)
+  const velocity = dragDistance / elapsed
+  const closeThreshold = Math.min(140, modalPanel.offsetHeight * 0.25)
+  const shouldClose = dragDistance >= closeThreshold || velocity >= 0.65
+
+  if (modalDragHandle.hasPointerCapture(event.pointerId)) {
+    modalDragHandle.releasePointerCapture(event.pointerId)
+  }
+
+  dragPointerId = null
+  modalDragHandle.style.cursor = 'grab'
+
+  if (shouldClose) {
+    closeModalFromSwipe()
+    return
+  }
+
+  const transition = '240ms cubic-bezier(0.22, 1, 0.36, 1)'
+  modalPanel.style.transition = `transform ${transition}`
+  modalBackdrop.style.transition = `opacity ${transition}`
+  modalPanel.style.transform = ''
+  modalBackdrop.style.opacity = ''
+  dragDistance = 0
+}
+
+modalDragHandle.addEventListener('pointerdown', event => {
+  if (!mobileModal.matches || event.button !== 0) return
+
+  dragPointerId = event.pointerId
+  dragStartY = event.clientY
+  dragStartTime = performance.now()
+  dragDistance = 0
+
+  modalPanel.style.transition = 'none'
+  modalBackdrop.style.transition = 'none'
+  modalDragHandle.style.cursor = 'grabbing'
+  modalDragHandle.setPointerCapture(event.pointerId)
+})
+
+modalDragHandle.addEventListener('pointermove', event => {
+  if (event.pointerId !== dragPointerId) return
+
+  dragDistance = Math.max(0, event.clientY - dragStartY)
+
+  if (!dragFrame) {
+    dragFrame = requestAnimationFrame(updateModalDrag)
+  }
+})
+
+modalDragHandle.addEventListener('pointerup', finishModalDrag)
+modalDragHandle.addEventListener('pointercancel', finishModalDrag)
 
 document.querySelectorAll('.project-card').forEach(card => {
   card.addEventListener('click', () => {
@@ -94,6 +196,7 @@ document.querySelectorAll('.project-card').forEach(card => {
           </div>
         `
 
+    resetModalDrag()
     modal.classList.remove('hidden')
     document.body.style.overflow = 'hidden'
   })
@@ -102,6 +205,7 @@ document.querySelectorAll('.project-card').forEach(card => {
 function hideModal() {
   modal.classList.add('hidden')
   document.body.style.overflow = ''
+  resetModalDrag()
 }
 
 closeModal.addEventListener('click', hideModal)
