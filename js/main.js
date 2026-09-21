@@ -79,8 +79,13 @@ document.querySelectorAll('.project-card').forEach(card => {
               Project Links
             </h4>
             <div class="flex flex-wrap gap-4">
-              ${links.map(l => `
-                <a href="${l.url}" target="_blank" class="h-12 px-6 rounded-xl border border-black/10 dark:border-white/10 lg:hover:border-sky-500 flex items-center gap-2 transition-all">
+              ${links.map(l => l.disabled ? `
+                <span aria-disabled="true" title="Live demo unavailable" style="cursor: not-allowed;" class="h-12 px-6 rounded-xl border border-black/10 dark:border-white/10 text-zinc-400 dark:text-zinc-500 flex items-center gap-2">
+                  <iconify-icon icon="${l.icon}" class="text-xl"></iconify-icon>
+                  ${l.label}
+                </span>
+              ` : `
+                <a href="${l.url}" target="_blank" rel="noopener noreferrer" class="h-12 px-6 rounded-xl border border-black/10 dark:border-white/10 lg:hover:border-sky-500 flex items-center gap-2 transition-all">
                   <iconify-icon icon="${l.icon}" class="text-xl"></iconify-icon>
                   ${l.label}
                 </a>
